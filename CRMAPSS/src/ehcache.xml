@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="true">
+    <diskStore path="cacheIO" />
+
+	   <defaultCache maxElementsInMemory="10000" eternal="true"
+                  overflowToDisk="false" diskPersistent="false"
+                  diskExpiryThreadIntervalSeconds="1800" memoryStoreEvictionPolicy="FIFO">
+    </defaultCache>
+ 
+		<cache name="country" maxElementsInMemory="10000" maxElementsOnDisk="1000" eternal="false" overflowToDisk="true" diskSpoolBufferSizeMB="20" timeToIdleSeconds="300" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LFU" />
+			<cache name="lead_source" maxElementsInMemory="10000" maxElementsOnDisk="1000" eternal="false" overflowToDisk="true" diskSpoolBufferSizeMB="20" timeToIdleSeconds="300" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LFU" />
+		<cache name="state" maxElementsInMemory="10000" maxElementsOnDisk="1000" eternal="false" overflowToDisk="true" diskSpoolBufferSizeMB="20" timeToIdleSeconds="300" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LFU" />
+		<cache name="city" maxElementsInMemory="10000" maxElementsOnDisk="1000" eternal="false" overflowToDisk="true" diskSpoolBufferSizeMB="20" timeToIdleSeconds="300" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LFU" />
+	
+</ehcache>
